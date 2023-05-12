@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Redirect page</title>
+    <script type="text/javascript">
+      var count = 20;
+      var intervalId = setInterval(function() {
+        count--;
+        document.getElementById("countdown").innerHTML = count;
+        if (count == 0) {
+          clearInterval(intervalId);
+          window.location.href = "https://your-link.com"; // замените ссылку на свою
+        }
+      }, 1000);
+    </script>
+  </head>
+  <body>
+    <div>Please wait for redirect...</div>
+    <div>Redirecting in <span id="countdown">20</span> seconds.</div>
+    <button onclick="window.location.href = 'https://your-link.com';">Redirect Now</button>
+  </body>
+</html>
